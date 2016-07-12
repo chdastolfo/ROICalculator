@@ -1,0 +1,21 @@
+img {
+	width: 15%;
+	height: 15%;
+	margin-top: 25px;
+}
+
+fieldset {
+	padding: 20px;
+}
+
+.btn {
+	margin-top: 80px;
+}
+
+h2, h5, p {
+	text-align: center;
+}
+
+.top-text {
+	margin-bottom: 30px;
+}
