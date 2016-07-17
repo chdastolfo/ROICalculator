@@ -1,0 +1,46 @@
+html{
+
+}
+
+head{
+
+}
+
+.row img {
+	max-width: 33%;
+}
+
+small{
+	font-size: 100%;
+}
+
+.logo{
+	margin-left:10px;
+}
+
+.site-title{
+	text-align: center;
+	margin-top: 70px;
+}
+
+.banner, 
+.main,
+.form-inline{
+	margin-left: 37%
+}
+
+.banner img{
+	max-width: 100%;
+
+}
+
+.main h2{
+	text-align: center;
+}
+.form{
+	display: block;
+}
+
+.next{
+	text-align: center;
+}
