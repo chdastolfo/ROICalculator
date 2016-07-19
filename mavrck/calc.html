@@ -1,28 +1,45 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>ROI Calculator</title>
-		<link rel="stylesheet" type="text/css" href="css/style.css">
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-	</head>
-	<body>
-		<header class="container-fluid">
-			<section class="logo col-xs-12">
-				<div class="row">
-					<a href="#"><img src="img/logo.png"></a>
-				</div>
-			</section>
-		</header>
-		<div class="container-fluid">
-			<div class="row">
-				<section class="main col-xs-3">
-					<h2>All Set!!! </h2>
-					<h2>By using the data you provided it looks like (name) can increase last years profits by ($)</h2>
-					<input type="text" class="form-control">
-					<button type="submit" class="btn btn-default">More Info</button>
-				</section>
-			</div>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Mavrck - ROI CALCULATOR</title>
+	<!-- Materialize CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col s12 m12 l12 top-text">
+			 <a href="" class="brand-logo logo"><img src="logo.png" alt=""></a>
+			<h2>ROI CALCULATOR</h2>
+			<p>This calculator simulates Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			<h5>Enter your curent metrics to calculate your potential results:</h5>
 		</div>
-	</body>
+		<form id="currentMetrics">
+			<fieldset>
+				<div class="input-field col s12">
+        	<input id="monthlyVisitors" class="validate" type="number">
+        	<label for="monthlyVisitors">Monthly Visitors</label>
+      	</div>
+				<div class="input-field col s12">      	
+					<label for="monthlyLeads">Monthly Leads</label>
+					<input class="validate" type="number" name="monthlyLeads" required="true">
+				</div>
+				<p>Anthony was here</p>
+				<div class="input-field col s12">
+					<label for="monthlyCustomers">Monthly Customers</label>
+					<input class="validate" type="text" name="monthlyCustomers" required="true">
+				</div>
+					<button id="calculateROI" class="btn waves-effect waves-light center-align" type="submit" name="action">Calculate
+  				</button>
+			</fieldset>
+		</form>
+	</div>
+</div>
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<!-- Materialize - JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>          	
+</body>
 </html>
-
