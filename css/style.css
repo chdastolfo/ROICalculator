@@ -1,64 +1,146 @@
-
-.row img {
-	max-width: 33%;
-}
-
-small{
-	font-size: 100%;
-}
-
-.logo{
-	margin:25px;
-	width: 15%;
-	height: 15%;
-
-}
-
-.site-title{
-	text-align: center;
-	margin-top: 70px;
-}
-
-.banner, 
-.main,
-.form-inline{
-	margin-left: 37%
-}
-
-.banner img{
-	max-width: 100%;
-
-}
-
-.main h2{
-	text-align: center;
-}
-.form{
-	display: block;
-}
-
-.next{
-	text-align: center;
-}
-
-.btn {
-	margin-top: 60px;
-}
+@import url("reset.css");
 
 /*	====================
-		POSITIONING
+			GENERAL
   	==================== */
-
- .left-column {
- 	background-image: url(..img1.jpeg);
+body {
+	height: 100% !important;
+	background-image: url(../img/img2.jpeg);
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
-	/*background: url(..img1.jpeg) center center cover no-repeat fixed;*/
+	width: 100%;
+	/*height: 100vh;*/
+}
+
+/** {
+	outline: 2px solid red;
+}*/
+.valign-wrapper {
+	margin-top: 80px;
+}
+.logo{
+	margin: 0 auto;
+	width: 35%;
+}
+
+
+/*	====================
+			POSITIONING
+  	==================== */
+.container {
+	width: 100%;
+	height: 95vh;
+}
+
+.row {
+	margin: 0;
+}
+
+.column1 {
+	height: 95vh;
+	width: 50%;
  }
 
+ .column2 {
+ 	background-color: white;
+ 	height: 100vh;
+	max-height: 100%;
+	width: 50%;
+ }
+
+ .col {
+	margin: 0;
+ }
+
+ .title {
+ 	margin-top: 50px;
+ }
+
+ .btn {
+ 	/*margin: 15px;*/
+ 	margin: 0 auto;
+ }
+
+.btn a {
+	text-align: center;
+}
+
+.btn-dropdown {
+	width: 70px;
+}
+
+.collapsible-rows {
+	margin-left: 40px;
+}
 
 
 
+ /*	====================
+					FONTS
+  	==================== */
+.title {
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.2rem;
+}
 
+.titleH1 {
+	color: #ecf0f1;
+	font-size: 250%;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	position: absolute;
+	bottom: 0;
+	margin-bottom: 10px;
+}
+
+.main-text {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1em;
+	/*font-variant: small-caps;*/
+}
+
+ /*	====================
+			 EXTRA STYLING
+  	==================== */
+
+.mavrck-gold {
+	color: #ffb300;
+}
+.mavrck-black{
+	color: #1f1f1f;
+}
+
+.collapsible-body {
+	background-color: #ffb300;
+}
+
+
+.color-test1 {
+	background-color: #ecf0f1;
+}
+
+.inner-text {
+	color: #34495e;
+}
+
+.btn {
+	background-color: #ffb300;
+}
+
+.btn:hover {
+	background-color: #1f1f1f;
+}
+
+.btn2 {
+	background-color: #1f1f1f;
+}
+
+.btn2:hover {
+	background-color: #1f1f1f;
+}
+
+.column2 span {
+	margin: 10px;
+}
