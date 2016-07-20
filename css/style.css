@@ -1,0 +1,67 @@
+@import url("reset.css");
+
+body {
+	height: 100% !important;
+	/*background-image: url(../img/img2.jpeg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;*/
+	width: 100%;
+	/*height: 100vh;*/
+}
+
+/** {
+	outline: 2px solid red;
+}*/
+.logo{
+	margin: 0 auto;
+	width: 25%;
+
+}
+
+
+.btn {
+	margin-top: 60px;
+}
+
+.btn-dropdown {
+	width: 70px;
+}
+
+/*	====================
+		POSITIONING
+  	==================== */
+.container {
+	width: 100%;
+	height: 100vh;
+}  	
+
+.row {
+	margin: 0;
+}
+.column1 {
+	height: 100vh;
+	width: 50%;
+	background-color: transparent;
+	background: url(https://unsplash.com/photos/B3rMsmQi4Qk);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+ }
+
+ .column2 {
+ 	background-color: white;
+ 	height: 100vh;
+	min-height: 100%;
+	width: 50%;
+	background-color: gray;
+/*	padding: 100px 50px;*/
+
+ }
+
+
+
+
+
