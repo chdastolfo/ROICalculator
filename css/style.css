@@ -1,4 +1,4 @@
-@import url("reset.css");
+/*@import url("reset.css");*/
 
 /*	====================
 			GENERAL
@@ -144,3 +144,14 @@ body {
 .column2 span {
 	margin: 10px;
 }
+
+/*	====================
+			JS HELPER
+	 ==================== */
+	 #influencer-panel {
+		 display: none;
+	 }
+
+	 .hide-class {
+		 display: none;
+	 }
