@@ -32,7 +32,7 @@ body {
 .container {
 	width: 100%;
 	height: 95vh;
-}  	
+}
 
 .row {
 	margin: 0;
@@ -71,25 +71,24 @@ body {
 	width: 70px;
 }
 
-.collapsible-body {
-	margin: 0 auto;
+.collapsible-rows {
+	margin-left: 40px;
 }
-.fa-facebook {
-	margin-right: 10px;
-}
+
+
 
  /*	====================
 					FONTS
   	==================== */
 .title {
-	font-family: 'Roboto', sans-serif; 
+	font-family: 'Roboto', sans-serif;
 	font-size: 1.2rem;
 }
 
 .titleH1 {
 	color: #ecf0f1;
 	font-size: 250%;
-	font-family: 'Roboto', sans-serif; 
+	font-family: 'Roboto', sans-serif;
 	font-weight: 400;
 	position: absolute;
 	bottom: 0;
@@ -105,6 +104,14 @@ body {
  /*	====================
 			 EXTRA STYLING
   	==================== */
+
+.mavrck-gold {
+	color: #ffb300;
+}
+.mavrck-black{
+	color: #1f1f1f;
+}
+
 .collapsible-body {
 	background-color: #ffb300;
 }
@@ -137,5 +144,3 @@ body {
 .column2 span {
 	margin: 10px;
 }
-
-
