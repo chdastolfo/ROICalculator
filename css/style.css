@@ -1,12 +1,15 @@
 @import url("reset.css");
 
+/*	====================
+			GENERAL
+  	==================== */
 body {
 	height: 100% !important;
-	/*background-image: url(../img/img2.jpeg);
+	background-image: url(../img/img2.jpeg);
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	background-size: cover;*/
+	background-size: cover;
 	width: 100%;
 	/*height: 100vh;*/
 }
@@ -14,23 +17,17 @@ body {
 /** {
 	outline: 2px solid red;
 }*/
+.valign-wrapper {
+	margin-top: 80px;
+}
 .logo{
 	margin: 0 auto;
-	width: 25%;
-
+	width: 35%;
 }
 
-
-.btn {
-	margin-top: 60px;
-}
-
-.btn-dropdown {
-	width: 70px;
-}
 
 /*	====================
-		POSITIONING
+			POSITIONING
   	==================== */
 .container {
 	width: 100%;
@@ -43,12 +40,6 @@ body {
 .column1 {
 	height: 100vh;
 	width: 50%;
-	background-color: transparent;
-	background: url(https://unsplash.com/photos/B3rMsmQi4Qk);
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: cover;
  }
 
  .column2 {
@@ -56,12 +47,78 @@ body {
  	height: 100vh;
 	min-height: 100%;
 	width: 50%;
-	background-color: gray;
-/*	padding: 100px 50px;*/
-
+	padding: 100px 50px;
  }
 
+ .col {
+	margin: 0;
+ }
+
+ .title {
+ 	margin-top: 50px;
+ }
+
+ .btn {
+ 	/*margin: 15px;*/
+ 	margin: 0 auto;
+ }
+
+.btn a {
+	text-align: center;
+}
+
+.btn-dropdown {
+	width: 70px;
+}
+
+ /*	====================
+					FONTS
+  	==================== */
+.title {
+	font-family: 'Roboto', sans-serif; 
+	font-size: 1.2rem;
+}
+
+.main-text {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1em;
+	/*font-variant: small-caps;*/
+}
+
+ /*	====================
+			 EXTRA STYLING
+  	==================== */
+.collapsible-body {
+	background-color: #ffb300;
+}
 
 
+.color-test1 {
+	background-color: #ecf0f1;
+}
+
+.inner-text {
+	color: #34495e;
+}
+
+.btn {
+	background-color: #ffb300;
+}
+
+.btn:hover {
+	background-color: #1f1f1f;
+}
+
+.btn2 {
+	background-color: #1f1f1f;
+}
+
+.btn2:hover {
+	background-color: #1f1f1f;
+}
+
+.column2 span {
+	margin: 10px;
+}
 
 

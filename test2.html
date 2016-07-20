@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Calculator</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
-	<link rel="stylesheet"  href="css/xlmaterialize.css">
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet"  href="css/style.css">
 </head>
 <body>
@@ -14,22 +14,28 @@
 				<section class="col s12 m6 l6 xl6 column1">
 				</section>
 				<section class="col s12 m6 l6 xl6 column2">
-							<div class="text-center">
-								<img src="img/logo.png" class="logo">
-							</div>
-							<h2>Do you want to use:</h2>
-							<div class="dropdown">
-	  						<button class="btn btn-default btn-dropdown dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-	    						Mavrck Social
-	    					<span class="caret"></span>
-	  						</button>
-	  						<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-							    <li><a href="#"> Mobile</a></li>
-							    <li><a href="#"> Commerce</a></li>
-							    <li><a href="#"> Community</a></li>
-	 							</ul>
-							</div>				
-							<button type="submit" class="btn btn-default">NEXT STEPS</button>
+					<div class="valign-wrapper">
+						<img src="img/logo.png" class="logo valign">
+					</div>
+					<h1 class="title center-align">DO YOU WANT TO USE:</h1>
+				  <ul class="collapsible" data-collapsible="accordion">
+				    <li>
+				      <div class="collapsible-header main-text">MAVRCK SOCIAL</div>
+				      <div class="collapsible-body color-test1"><p class="main-text center-align">Lorem ipsum dolor sit amet.</p><span class="valign-wrapper"><a class="valign waves-effect waves-light btn main-text">SELECT</a></span></div>
+				    </li>
+				    <li>
+				      <div class="collapsible-header main-text">MAVRCK MOBILE</div>
+				      <div class="collapsible-body"><p class="main-text center-align">Lorem ipsum dolor sit amet.</p><span class="valign-wrapper"><a class="valign waves-effect waves-light btn btn2 main-text">SELECT</a></span></div>
+				    </li>
+				    <li>
+				      <div class="collapsible-header main-text">MAVRCK COMMERCE</div>
+				      <div class="collapsible-body"><p class="main-text center-align">Lorem ipsum dolor sit amet.</p></div>
+				    </li>
+				    <li>
+				      <div class="collapsible-header main-text">MAVRCK COMMUNITY</div>
+				      <div class="collapsible-body"><p class="inner-text main-text center-align">Lorem ipsum dolor sit amet.</p></div>
+				    </li>
+				  </ul>
 				</section>
 			</div>	
 		</div>
