@@ -1,3 +1,7 @@
+/** {
+	outline: 2px solid red;
+}*/
+
 /*@import url("reset.css");*/
 
 /*	====================
@@ -5,7 +9,7 @@
   	==================== */
 body {
 	height: 100% !important;
-	background-image: url(../img/img2.jpeg);
+	background-image: url(../img/img3.jpeg);
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -78,7 +82,7 @@ body {
 
 
  /*	====================
-					FONTS
+		FONTS
   	==================== */
 .title {
 	font-family: 'Roboto', sans-serif;
@@ -102,7 +106,7 @@ body {
 }
 
  /*	====================
-			 EXTRA STYLING
+		EXTRA STYLING
   	==================== */
 
 .mavrck-gold {
@@ -114,6 +118,15 @@ body {
 
 .collapsible-body {
 	background-color: #ffb300;
+}
+
+.collapsible-header{
+	padding: 10px;
+}
+
+.collapsible img:first-of-type {
+	width: 40px;
+	float: right;
 }
 
 
@@ -145,13 +158,28 @@ body {
 	margin: 10px;
 }
 
-/*	====================
-			JS HELPER
-	 ==================== */
-	 #influencer-panel {
-		 display: none;
-	 }
+.input-field label, input {
+	color:  #1f1f1f;
+}
 
-	 .hide-class {
+
+/*	====================
+		JS HELPER
+	 ==================== */
+#influencer-panel {
 		 display: none;
-	 }
+}
+
+.hide-class {
+		 display: none;
+}
+
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+/* Styles */
+	section.column2 {
+		margin-top: -500px;	
+	}
+}
