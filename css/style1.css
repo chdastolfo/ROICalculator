@@ -9,7 +9,10 @@
   	==================== */
 body {
 	height: 100% !important;
-	background-image: url(../img/img3.jpeg);
+	background-image: linear-gradient(
+      rgba(255, 255, 255, 0.2), 
+      rgba(255, 255, 255, 0.2)
+    ), url(../img/landing.jpg);
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -21,8 +24,9 @@ body {
 /** {
 	outline: 2px solid red;
 }*/
-.valign-wrapper {
+.mainLogo {
 	margin-top: 80px;
+	margin-bottom: 80px;
 }
 .logo{
 	margin: 0 auto;
@@ -44,14 +48,18 @@ body {
 
 .column1 {
 	height: 95vh;
-	width: 50%;
+	/*width: 50%;*/
+	color:#1f1f1f;
  }
+
+
 
  .column2 {
  	background-color: white;
  	height: 100vh;
 	max-height: 100%;
 	width: 50%;
+	padding-right:0px;
  }
 
  .col {
@@ -78,11 +86,32 @@ body {
 .collapsible-rows {
 	margin-left: 40px;
 }
+.innerContainer.col{
+	padding-right:inherit;
+}
 
+.contact{
+	background: #ffb300;
+    margin-top: -22px;
+    position: relative;
+    z-index: 10;
+    height: 34vh;
+    padding-left: 10px;
 
+}
+
+.company,
+.resources{
+	padding: 10px;
+	text-align:center;
+}
+.brands{
+	text-align: center;
+	padding:10px,10px,10px,20px;
+}
 
  /*	====================
-		FONTS
+					FONTS
   	==================== */
 .title {
 	font-family: 'Roboto', sans-serif;
@@ -106,7 +135,7 @@ body {
 }
 
  /*	====================
-		EXTRA STYLING
+			 EXTRA STYLING
   	==================== */
 
 .mavrck-gold {
@@ -163,32 +192,25 @@ body {
 }
 
 /* label focus color */
- .input-field input:focus + label {
-   color: #ffb300 !important;
- }
- /* label underline focus color */
- .row .input-field input:focus {
-   border-bottom: 1px solid #ffb300 !important;
-   box-shadow: 0 1px 0 0 #ffb300 !important
- }
+input[type=text]:focus{
+border-bottom: 1px solid #ffb300 !important;
+box-shadow: 0 1px 0 0 #ffb300 !important;
+}
+
+input[type=email]:focus{
+border-bottom: 1px solid #ffb300 !important;
+box-shadow: 0 1px 0 0 #ffb300 !important;
+}
+
+
 
 /*	====================
-		JS HELPER
+			JS HELPER
 	 ==================== */
-#influencer-panel {
+	 #influencer-panel {
 		 display: none;
-}
+	 }
 
-.hide-class {
+	 .hide-class {
 		 display: none;
-}
-
-
-
-/* Smartphones (portrait and landscape) ----------- */
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-/* Styles */
-	section.column2 {
-		margin-top: -500px;	
-	}
-}
+	 }
