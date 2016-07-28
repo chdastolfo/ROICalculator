@@ -54,6 +54,15 @@ body {
 	width: 50%;
  }
 
+ section.column2 {
+	position: absolute;
+	right: 0;
+ }
+
+#column2{
+	position: absolute;
+	right: 0;
+}
  .col {
 	margin: 0;
  }
@@ -177,9 +186,28 @@ body {
 
 
 /* Smartphones (portrait and landscape) ----------- */
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+@media screen and (min-width: 320px) and (max-device-width : 600px)  {
+    body {
+        background-color: lightgreen;
+    }
+
+    .column2 {
+    	position: fixed;
+    	top: 0;
+    }
+}
+
+@media only screen and (max-device-width : 320px) {
+
 /* Styles */
-	section.column2 {
-		margin-top: -500px;	
-	}
+ body {
+        background-color: lightgreen;
+    }
+
+    .column2 {
+    	position: fixed;
+    	top: 0;
+    }
+
 }
