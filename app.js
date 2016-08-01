@@ -27,7 +27,7 @@ function monthlyPrice(monthlyActivations){
 			price = 12000;
 			break;
 		default:
-			price = 1000;
+			price = 5000;
 			break;
 	} return price;
 };
@@ -63,10 +63,10 @@ $('.submit').on('click', function calculate() {
 	var roi = (revenue/(contractCost+estIncentiveBudget)) * 100;
 	
 	
-	if(isNaN(audience_size)) {alert("Your response for number of audience size contains a non-numeric character. Please re-enter your response.");}
-	if(isNaN(click_through)) {alert("Your response for number of click through contains a non-numeric character. Please re-enter your response.");}
-	if(isNaN(conversion_rate)) {alert("Your response for the conversion rate contains a non-numeric character. Please re-enter your response.");}
-	if(isNaN(average_price)) {alert("Your response for average price contains a non-numeric character. Please re-enter your response.");}
+	//if(isNaN(audience_size)) {alert("Your response for number of audience size contains a non-numeric character. Please re-enter your response.");}
+	//if(isNaN(click_through)) {alert("Your response for number of click through contains a non-numeric character. Please re-enter your response.");}
+	//if(isNaN(conversion_rate)) {alert("Your response for the conversion rate contains a non-numeric character. Please re-enter your response.");}
+	//if(isNaN(average_price)) {alert("Your response for average price contains a non-numeric character. Please re-enter your response.");}
 	
 
 	console.log(contractCost);
@@ -77,4 +77,5 @@ $('.submit').on('click', function calculate() {
 	console.log(totalSocialPosts);
 	console.log(engagements);
 	console.log(conversions);
+
 });
