@@ -21,7 +21,7 @@
 					</div>
 					<h1 class="title center-align">ROI CALCULATOR</h1>
 					<!-- FORM -->
-					<form class="col s12">
+					<form class="col s12" method="POST">
 				      	<div class="row">
 				        	<div class="input-field col s12">
 					          	<input id="audience_size" type="text" class="validate">
@@ -30,13 +30,13 @@
 				      	</div>
 				      	<div class="row">
 				        	<div class="input-field col s12">
-					          	<input id="click_through" type="text" class="validate">
-					          	<label for="click_through">Click Through Rate on Audience (Percentage)</label>
+					          	<input id="click_through" type="text" class="validate" name="click_through">
+					          	<label for="click_through" name="click_through">Click Through Rate on Audience (Percentage)</label>
 				        	</div>
 				      	</div>
 				    	<div class="row">
 				        	<div class="input-field col s12">
-					          	<input id="conversion_rate" type="text" class="validate">
+					          	<input id="conversion_rate" type="text" class="validate" value ="">
 					          	<label for="conversion_rate">Conversion Rate on Landing Page</label>
 				        	</div>
 				      	</div>
@@ -79,5 +79,24 @@
 <script src="js/main.js"></script>
 <script src="js/underscore.min.js"></script>
 <script src="app.js"></script>
+<script>
+	var qs = (function(a) {
+	    if (a == "") return {};
+	    var b = {};
+	    for (var i = 0; i < a.length; ++i)
+	    {
+	        var p=a[i].split('=', 2);
+	        if (p.length == 1)
+	            b[p[0]] = "";
+	        else
+	            b[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
+	    }
+	    return b;
+	})(window.location.search.substr(1).split('&'));
+
+	qs["clickThroughRate"];
+	console.log(qs);
+	$("#click_through").val(qs["clickThroughRate"]);
+</script>
 </body>
 </html>

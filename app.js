@@ -3,6 +3,9 @@ var _ = $.getScript('./js/underscore.min.js');
 
 //var requirejs = require('require.js');
 
+
+//BEGIN MAILER LOGIC
+
 // //node Mailer
 // var nodemailer = require('nodemailer');
 // var transporter = nodemailer.createTransport('smtps://user%40gmail.com:pass@smtp.gmail.com');
@@ -60,24 +63,28 @@ var _ = $.getScript('./js/underscore.min.js');
 // }
 // });
 
-// rate = document.getElemenById('industry').value
-// var industryRate = new Array();
-// 	industryRate["agency"] = 2.69;
-// 	industryRate["beauty"] = 2.1;
-// 	industryRate["cpg"] = 2.1;
-// 	industryRate["entertainment"] = 2.87;
-// 	industryRate["fashion"] = 2.53;
-// 	industryRate["gaming"] = 3.45;
-// 	industryRate["publication"] = 4.66;
-// 	industryRate["qsr"] = 1.33;
-// 	industryRate["retail"] = 2.53;
-// 	industryRate["travel"] = 2.26;
-// 	industryRate["other"] = 2.65;
+//BEGIN AUTOPOPULATION OF CLICK-THROUGH RATE BY INDUSTRY 
 
-//function clickThroughRate() {
-//	document.getElementById('industryRate').value = ;
-//	document.getElementById('industry')=;
-//});
+var industryRate = {
+	"agency": 2.69,
+	"beauty": 2.1,
+	"cpg": 2.1,
+    "entertainment": 2.87,
+	"fashion": 2.53,
+	"gaming": 3.45,
+	"publication": 4.66,
+	"qsr": 1.33,
+	"retail": 2.53,
+	"travel": 2.26,
+	"other": 2.65
+};
+
+$('.industry').on('change', function setRate(){
+  var clickThroughRate = industryRate[$("#industry").val()];
+  	$("#page2").attr("href", "page2.html?clickThroughRate=" + clickThroughRate)
+});
+
+//BEGIN ROI CALCULATIONS
 
 function monthlyPrice(activations){
 	switch(activations) {
@@ -118,20 +125,20 @@ $('.submit').on('click', function calculate() {
 	var clickRate = 4;
 	var conversionRate = $("#conversion_rate").val()/100;
 
-	var signups = $("#audience_size").val() * $("#click_through").val()/100 * signupRate;
+	var signups = $("#audience_size").val() * clickThroughRate/100 * signupRate;
 
 	var socialPosts = signups * socialPostMultiplier;
 	var engagementOnPosts = socialPosts * engagementRate;
 	var clicksOnPosts = clickRate * socialPosts;
 	var conversions = clicksOnPosts * conversionRate;
 	var activations = signups * .5;
-	var engagements = engagementOnPosts * 2.33333; //Couldn't figure out how this was calculated on ROI spreadsheet. Engagements only goes into engagements on posts 2 1/3 times.
+	var engagements = engagementOnPosts * 2.33333; //Couldn't figure out how this was calculated on Google ROI spreadsheet. Engagements only goes into engagements on posts 2 1/3 times.
 	
 	var purchaseRevenue = $("#average_price").val() * conversions;
 
 	var monthlyContractCost = monthlyPrice(activations);
 	var monthlyIncentiveCost = socialPosts * 0.5;
-	var monthlyRevenue = $("#average_price").val()*conversions;
+	var monthlyRevenue = $("#average_price").val() * conversions;
 						 
 	var totalEngagements = engagements * 12;
 	var monthlyConversions = conversions * 12;
@@ -141,7 +148,7 @@ $('.submit').on('click', function calculate() {
 	var contractCost = monthlyContractCost * 12;
 	var estIncentiveBudget = monthlyIncentiveCost * 12;
 	var revenue = monthlyRevenue * 12;
-	var roi = (revenue/(contractCost+estIncentiveBudget)) * 100;
+	var roi = (revenue/(contractCost + estIncentiveBudget)) * 100;
 	
 	
 	//if(isNaN(audience_size)) {alert("Your response for number of audience size contains a non-numeric character. Please re-enter your response.");}
@@ -158,6 +165,8 @@ $('.submit').on('click', function calculate() {
 	console.log(totalSocialPosts);
 	console.log(totalEngagements);
 	console.log(conversions);
+
+	window.alert(roi)
 	
 
 
