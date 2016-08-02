@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app='ROIapp'>
 	<head>
 		<meta charset="UTF-8">
 		<title>Page Test1</title>
@@ -7,8 +7,23 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
 		<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet"  href="css/style1.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.4/angular.min.js"></script>
+		<script>
+		var ROIapp = angular.module('ROIapp', []);
+
+		ROIapp.controller('ROIcontroller', function($scope){
+				$scope.list = [];
+				$scope.getInfo = function(){
+					$scope.list.push({
+						  name: 	$scope.name,
+							job: 		$scope.job,
+						  email: 	$scope.email
+					});
+				}
+		});
+		</script>
 	</head>
-	<body>
+	<body ng-controller="ROIcontroller">
 		
 			<div class="row">
 				<div class="innerContainer col m12 l12">
@@ -26,9 +41,9 @@
 						<!-- <h1 class="title center-align">DO YOU WANT TO USE:</h1> -->
 					  <form>
 							<input type="text" class="form-control" placeholder="Company" required>
-							<input type="text" class="form-control" placeholder="Name" >
-							<input type="text" class="form-control" placeholder="Job Title">
-          		<input id="email" type="email" class="validate" placeholder="Email">
+							<input type="text" class="form-control" placeholder="Name" ng-model="name" >
+							<input type="text" class="form-control" placeholder="Job Title" ng-model="job">
+          		<input id="email" type="email" class="validate" placeholder="Email" ng-model="email">
           		<div>
           			<div>
 								<select class="input-field browser-default center-align">
@@ -61,7 +76,7 @@
 					  			</select>
 					  		<div class="valign-wrapper">
 					  			<a href="page2.html" class="valign">
-					  				<button type="button" class="btn btn-primary btn-lg">Submit</button>
+					  				<button type="button" class="btn btn-primary btn-lg" ng-disable='true'ng-submit="getInfo()">Submit</button>
 					  			</a>		
 					  		</div>				  			
 				  		</div>
