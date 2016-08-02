@@ -1,5 +1,25 @@
 var _ = $.getScript('./js/underscore.min.js');
 
+
+rate = document.getElemenById('industry').value
+var industryRate = new Array();
+	industryRate["agency"] = 2.69;
+	industryRate["beauty"] = 2.1;
+	industryRate["cpg"] = 2.1;
+	industryRate["entertainment"] = 2.87;
+	industryRate["fashion"] = 2.53;
+	industryRate["gaming"] = 3.45;
+	industryRate["publication"] = 4.66;
+	industryRate["qsr"] = 1.33;
+	industryRate["retail"] = 2.53;
+	industryRate["travel"] = 2.26;
+	industryRate["other"] = 2.65;
+
+function clickThroughRate() {
+	document.getElementById('industryRate').value = ;
+	document.getElementById('industry')=;
+}
+
 function monthlyPrice(monthlyActivations){
 	switch(monthlyActivations) {
 		case _.range(30000):
@@ -51,7 +71,7 @@ $('.submit').on('click', function calculate() {
 
 	var monthlyContractCost = monthlyPrice(parseInt($("#monthlyActivations").val())) * 0.5;
 	var monthlyIncentiveCost = totalSocialPosts * 0.5;
-	var monthlyRevenue = $("#average_price").val()*conversions;
+	var monthlyRevenue = parseInt($("#average_price").val())*conversions;
 						 
 	var engagements = engagementOnPosts * 12;
 	var monthlyConversions = conversions * 12;
@@ -69,13 +89,17 @@ $('.submit').on('click', function calculate() {
 	//if(isNaN(average_price)) {alert("Your response for average price contains a non-numeric character. Please re-enter your response.");}
 	
 
+	console.log(roi);
 	console.log(contractCost);
 	console.log(estIncentiveBudget);
 	console.log(revenue);
-	console.log(roi);
 	console.log(communityMembers);
 	console.log(totalSocialPosts);
 	console.log(engagements);
 	console.log(conversions);
+	
+function sendEmail(){
+
+}
 
 });
