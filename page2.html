@@ -19,45 +19,66 @@
 					<div class="valign-wrapper">
 						<img src="img/logo.png" class="logo valign">
 					</div>
-					<h1 class="title center-align">AUDIENCE SIZE:</h1>
+					<h1 class="title center-align">ROI CALCULATOR</h1>
 					<!-- FORM -->
 					<form class="col s12">
 				      	<div class="row">
+<<<<<<< HEAD
 				        	<div class="input-field col s12 align-right">
 					          	<input id="audience_size" type="number" class="validate">
 					          	<label for="audience_size">Audience Size:</label>
+=======
+				        	<div class="input-field col s12">
+					          	<input id="audience_size" type="text" class="validate">
+					          	<label for="audience_size">Audience Size (Email):</label>
+>>>>>>> master
 				        	</div>
 				      	</div>
 				      	<div class="row">
 				        	<div class="input-field col s12">
-					          	<input id="click_through" type="number" class="validate">
+					          	<input id="click_through" type="text" class="validate">
 					          	<label for="click_through">Click Through Rate on Audience (Percentage)</label>
 				        	</div>
 				      	</div>
 				    	<div class="row">
 				        	<div class="input-field col s12">
-					          	<input id="conversion_rate" type="number" class="validate">
+					          	<input id="conversion_rate" type="text" class="validate">
 					          	<label for="conversion_rate">Conversion Rate on Landing Page</label>
 				        	</div>
 				      	</div>
 				      	<div class="row">
 				        	<div class="input-field col s12">
-					          	<input id="average_price" type="number" class="validate">
+					          	<input id="average_price" type="text" class="validate">
 					          	<label for="average_price">Average Purchase Price</label>
 				        	</div>
-				      	</div>			      	
+				      	</div>
+				      	<div class="row">
+				      		<select  id="marketingObjective" class="input-field browser-default">
+					  				<option value="">Marketing Objective</option>
+					 					<option value="">Customer Acquisition</option>
+					  				<option value="">eCommerce Purchases</option>
+					  				<option value="">Mobile App Installs</option>
+					  				<option value="">Products Reviews</option>
+					  				<option value="">Content Amplification</option>
+					  				<option value="">Grow Fans on Subscribers</option>
+					  				<option value="">Brand Re-engagement</option>
+					  				<option value="">Claim Coupons or Promo Codes</option>
+					  				<option value="">General User Content</option>
+					  				<option value="">Collect Survey Data</option>
+					  			</select>
+				      	</div>				      	
 					    <div class="row">
 					    	<div class="center-align">
 						    	<div class="">
 						          <!-- Dropdown Trigger -->
-								  <a class='dropdown-button btn' href='#' data-activates='dropdown1'>Marketing Objective (Conversion Goal)</a>
+								  <a class='dropdown-button btn submit' href='#' data-activates='dropdown1'>Calculate ROI</a>
 
 								  <!-- Dropdown Structure -->
 								  <ul id='dropdown1' class='dropdown-content'>
-								    <li><a href="#!">one</a></li>
-								    <li><a href="#!">two</a></li>
+								    <li><a href="#!">Customer Acquisition</a></li>
+								    <li><a href="#!">eCommerce Purchases</a></li>
 								    <li class="divider"></li>
-								    <li><a href="#!">three</a></li>
+								    <li><a href="#!">Mobile App Installs</a></li>
 								  </ul>				    		
 						    	</div>
 							</div>
@@ -71,5 +92,7 @@
 <script   src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
 <script src="js/main.js"></script>
+<script src="js/underscore.min.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
