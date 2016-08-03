@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Form1</title>
+</head>
+<body>
+  <section class="col s12 m6 l6 xl6 column2">
+    <div class="valign-wrapper mainLogo">
+      <img src="img/logo.png" class="logo valign">
+    </div>
+    <!-- <h1 class="title center-align">DO YOU WANT TO USE:</h1> -->
+    <form>
+      <input type="text" class="form-control" placeholder="Company" required>
+      <input type="text" class="form-control" placeholder="Name" ng-model="name" >
+      <input type="text" class="form-control" placeholder="Job Title" ng-model="job">
+      <input id="email" type="email" class="validate" placeholder="Email" ng-model="email">
+      <div>
+        <div>
+        <select class="input-field browser-default center-align">
+            <option value="" id="industry" class="center-align">Select Your Industry</option>
+          <option value="agency">Agency</option>
+            <option value="beauty">Beauty</option>
+            <option value="cpg">CPG and Household Goods</option>
+            <option value="entertainment">Entertainment</option>
+            <option value="fashion">Fashion</option>
+            <option value="gaming">Gaming</option>
+            <option value="publication">Publication</option>
+            <option value="qsr">QSR and Dining</option>
+            <option value="retail">Retail</option>
+            <option value="travel">Travel</option>
+            <option value="other">Other</option>
+            <label>Industry</label>
+        </select>
+        <select class="input-field browser-default">
+            <option value="">Annual Digital Marketing Spend</option>
+          <option value="1">0-50000</option>
+            <option value="2">50000-100000</option>
+            <option value="3">100000-150000</option>
+            <option value="4">150000-250000</option>
+            <option value="5">250000-500000</option>
+            <option value="6">500000-1000000</option>
+            <option value="7">1000000-2500000</option>
+            <option value="8">2500000-5000000</option>
+            <option value="9">5000000-10000000</option>
+            <option value="10">10000000+</option>
+          </select>
+        <div class="valign-wrapper">
+          <a href="page2.html" class="valign">
+            <button type="button" class="btn btn-primary btn-lg" ng-disable='true'ng-submit="getInfo()">Submit</button>
+          </a>
+        </div>
+      </div>
+      </div>
+    </form>
+  </section>
+</body>
+</html>
