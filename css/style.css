@@ -1,7 +1,7 @@
 /** {
 	outline: 2px solid red;
-}*/
-
+}
+*/
 /*@import url("reset.css");*/
 
 /*	====================
@@ -9,21 +9,13 @@
   	==================== */
 body {
 	height: 100% !important;
-	background-image: url(../img/img3.jpeg);
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: cover;
-	width: 100%;
-	/*height: 100vh;*/
 }
 
-/** {
-	outline: 2px solid red;
-}*/
+
 .valign-wrapper {
-	margin-top: 80px;
+	margin-top: 30px;
 }
+
 .logo{
 	margin: 0 auto;
 	width: 35%;
@@ -33,61 +25,40 @@ body {
 /*	====================
 			POSITIONING
   	==================== */
-.container {
-	width: 100%;
-	height: 95vh;
-}
 
-.row {
-	margin: 0;
+.flexbox-container {
+	display: flex;
+}  	
+
+
+
+.column1, .column2 {
+	padding: 1em;
+	height: 100vh;
+	min-height: 100%;
+	float: left;
 }
 
 .column1 {
-	height: 95vh;
+	flex: 1;
 	width: 50%;
- }
+	background-image: url(../img/hero1.jpeg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
 
- .column2 {
- 	background-color: white;
- 	height: 100%;
-	max-height: 100%;
+.column2 {
+	flex: 1;
 	width: 50%;
- }
+	background-color: white;
+}
 
- section.column2 {
-	position: absolute !important;
- 	right: 0 !important;
- }
-
- .col {
-	margin: 0;
- }
-
- .title {
- 	margin-top: 50px;
- }
-
- .btn {
- 	/*margin: 15px;*/
- 	margin: 0 auto;
- }
-
-.btn a {
+.center-btn {
+	margin-top: 40px;
 	text-align: center;
 }
-
-.btn-dropdown {
-	width: 70px;
-}
-
-.collapsible-rows {
-	margin-left: 40px;
-}
-
-.dropdown-button {
-	margin-top: 25px;
-}
-
 
  /*	====================
 		FONTS
@@ -162,9 +133,6 @@ body {
 	background-color: #1f1f1f;
 }
 
-.column2 span {
-	margin: 10px;
-}
 
 .input-field label, input {
 	color:  #1f1f1f;
@@ -201,39 +169,47 @@ body {
 /*	====================
 		JS HELPER
 	 ==================== */
-#influencer-panel {
+/*#influencer-panel {
 		 display: none;
 }
 
 .hide-class {
 		 display: none;
-}
+}*/
 
 
 
 /* Smartphones (portrait and landscape) ----------- */
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-/* Styles */
-	section.column2 {
-		margin-top: -500px;
-		positon: absolute;
-	}
+/* Portrait and Landscape */
+/*@media only screen and (min-device-width: 320px) and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
 
-	#page2 {
-		display: none;
-		z-index: 10;
+	.column1 {
+
 	}
 }
+*/
 
-@media only screen and (min-width: 0){
+/*@media only screen and (min-width: 0) and (max-width: 480px)  {
+		.column1 {
+		display: none;
+	}
+
 	.column2 {
-		position: absolute;
-		right: 0;
-		top: 0;
+		width: 100%;
 	}
 
-	#page2 {
-		display: none;
-		z-index: 10;
-	}
 }
+*/
+@media screen and (min-width: 320px) and (max-width: 480px) {
+
+	.column1 {
+		display: none;
+	}
+
+	.column2 {
+		width: 100%;
+	}
+}	
+
+	
