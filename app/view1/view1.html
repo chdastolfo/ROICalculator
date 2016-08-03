@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Form1</title>
-</head>
-<body>
-  <form>
+<form>
     <input type="text" class="form-control" placeholder="Company" required>
     <input type="text" class="form-control" placeholder="Name" ng-model="name" >
     <input type="text" class="form-control" placeholder="Job Title" ng-model="job">
@@ -41,10 +34,8 @@
           <option value="10">10000000+</option>
         </select>
         <div class="center-btn">
-          <a type="button" class="btn btn-primary btn-lg" ng-disable='true'ng-submit="getInfo()">Submit</a>
+          <a href="#!/view2" type="button" class="btn btn-primary btn-lg" ng-disable='true'ng-submit="getInfo()">Submit</a>
         </div>
       </div>
     </div>
   </form>
-</body>
-</html>

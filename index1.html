@@ -1,26 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html ng-app='ROIapp'>
 	<head>
 		<meta charset="UTF-8">
-		<title>ROI Calculator</title>
+		<title>Page Test1</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
 		<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet"  href="css/style.css">
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.4/angular.min.js"></script>
 		<script>
-		var ROIapp = angular.module('ROIapp', []);
+		// var ROIapp = angular.module('ROIapp', []);
 
-		ROIapp.controller('ROIcontroller', function($scope){
-				$scope.list = [];
-				$scope.getInfo = function(){
-					$scope.list.push({
-						  name: 	$scope.name,
-							job: 		$scope.job,
-						  email: 	$scope.email
-					});
-				}
-		});
+		// ROIapp.controller('ROIcontroller', function($scope){
+		// 		$scope.list = [];
+		// 		$scope.getInfo = function(){
+		// 			$scope.list.push({
+		// 				  name: 	$scope.name,
+		// 					job: 		$scope.job,
+		// 				  email: 	$scope.email
+		// 			});
+		// 		}
+		// });
 		</script>
 	</head>
 	<body ng-controller="ROIcontroller">
