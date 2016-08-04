@@ -127,7 +127,7 @@ $('.submit').on('click', function calculate() {
 		data: data,
 		success: null,
 		dataType: 'json',
-		contentType: 'application/json'
+		contentType: 'json'
 	});
 
 

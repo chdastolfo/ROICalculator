@@ -32,7 +32,7 @@ app.post('/mail', function(request, response) {
     from: "MAVRCK <mavrck@mavrck.co>",
     to: "chdastolfo@gmail.com",
     subject: "You are looking great today. Here's your ROI",
-    text: "Some text"
+    text: data
   };
 
   mailgun.messages().send(email, function(error, body) {
