@@ -1,7 +1,7 @@
 /** {
 	outline: 2px solid red;
-}*/
-
+}
+*/
 /*@import url("reset.css");*/
 
 /*	====================
@@ -9,25 +9,13 @@
   	==================== */
 body {
 	height: 100% !important;
-	background-image: linear-gradient(
-      rgba(255, 255, 255, 0.2), 
-      rgba(255, 255, 255, 0.2)
-    ), url(../img/landing.jpg);
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: cover;
-	width: 100%;
-	/*height: 100vh;*/
 }
 
-/** {
-	outline: 2px solid red;
-}*/
-.mainLogo {
-	margin-top: 80px;
-	margin-bottom: 80px;
+
+.valign-wrapper {
+	margin-top: 30px;
 }
+
 .logo{
 	margin: 0 auto;
 	width: 35%;
@@ -37,81 +25,64 @@ body {
 /*	====================
 			POSITIONING
   	==================== */
-.container {
-	width: 100%;
-	height: 95vh;
+
+.flexbox-container {
+	display: flex;
 }
 
-.row {
-	margin: 0;
+
+
+.column1, .column2 {
+	padding: 1em;
+	height: 100vh;
+	min-height: 100%;
+	float: left;
 }
 
 .column1 {
-	height: 95vh;
-	/*width: 50%;*/
-	color:#1f1f1f;
- }
-
-
-
- .column2 {
- 	background-color: white;
- 	height: 100vh;
-	max-height: 100%;
+	flex: 1;
 	width: 50%;
-	padding-right:0px;
- }
+	background-image: url(../img/hero1.jpeg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
 
- .col {
-	margin: 0;
- }
+.column2 {
+	flex: 1;
+	width: 50%;
+	background-color: white;
+}
 
- .title {
- 	margin-top: 50px;
- }
-
- .btn {
- 	/*margin: 15px;*/
- 	margin: 0 auto;
- }
-
-.btn a {
+.center-btn {
+	margin-top: 40px;
 	text-align: center;
 }
 
-.btn-dropdown {
-	width: 70px;
+.submit {
+	margin-top: 50px;
 }
 
-.collapsible-rows {
-	margin-left: 40px;
-}
-.innerContainer.col{
-	padding-right:inherit;
+.margin-fix {
+	margin-top: -5px;;
 }
 
-.contact{
-	background: #ffb300;
-    margin-top: -22px;
-    position: relative;
-    z-index: 10;
-    height: 34vh;
-    padding-left: 10px;
-
+form {
+	margin-top: 100px;
 }
 
-.company,
-.resources{
-	padding: 10px;
-	text-align:center;
+#form1 {
+	margin: 0 20px;
+	margin-top: 100px;
 }
-.brands{
-	text-align: center;
-	padding:10px,10px,10px,20px;
+
+select .input-field {
+	margin-top: 20px;
 }
 
  /*	====================
-					FONTS
+		FONTS
   	==================== */
 .title {
 	font-family: 'Roboto', sans-serif;
@@ -135,7 +106,7 @@ body {
 }
 
  /*	====================
-			 EXTRA STYLING
+		EXTRA STYLING
   	==================== */
 
 .mavrck-gold {
@@ -183,34 +154,82 @@ body {
 	background-color: #1f1f1f;
 }
 
-.column2 span {
-	margin: 10px;
-}
 
 .input-field label, input {
 	color:  #1f1f1f;
 }
 
+.page-footer {
+	background-color: #ffb300 !important;
+	z-index: 10;
+	position: relative;
+}
+
+select {
+	outline: .5px solid #bdc3c7;
+}
+
+.thankyou {
+	border: 1px solid black;
+	padding: 20px;
+	text-align: center;
+	margin-top: 200px;
+	margin: 200px 50px 0;
+}
+
 /* label focus color */
-input[type=text]:focus{
-border-bottom: 1px solid #ffb300 !important;
-box-shadow: 0 1px 0 0 #ffb300 !important;
-}
+ .input-field input:focus + label {
+   color: #ffb300 !important;
+ }
+ /* label underline focus color */
+ .row .input-field input:focus {
+   border-bottom: 1px solid #ffb300 !important;
+   box-shadow: 0 1px 0 0 #ffb300 !important
+ }
 
-input[type=email]:focus{
-border-bottom: 1px solid #ffb300 !important;
-box-shadow: 0 1px 0 0 #ffb300 !important;
-}
+ /* form index.page */
+ /* label focus color */
+ input[type=text]:focus{
+ border-bottom: 1px solid #ffb300 !important;
+ box-shadow: 0 1px 0 0 #ffb300 !important;
+ }
 
-
+ input[type=email]:focus{
+ border-bottom: 1px solid #ffb300 !important;
+ box-shadow: 0 1px 0 0 #ffb300 !important;
+ }
 
 /*	====================
-			JS HELPER
+		JS HELPER
 	 ==================== */
-	 #influencer-panel {
+/*#influencer-panel {
 		 display: none;
-	 }
+}
 
-	 .hide-class {
+.hide-class {
 		 display: none;
-	 }
+}*/
+
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media screen and (min-width: 0px) and (max-width: 560px) {
+
+	.column1 {
+		display: none;
+	}
+
+	.column2 {
+		width: 100%;
+	}
+}
+
+@media only screen and (min-width: 0) and (max-width:480px) {
+	.column1 {
+		display: none;
+	}
+
+	.column2 {
+		width: 100%;
+	}
+}
