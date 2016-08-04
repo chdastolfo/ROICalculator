@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Page Test1</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet"  href="css/style1.css">
+</head>
+<body>
+	<!-- <div class="container"> -->
+		<div class="row">
+			<!-- <div class="innerContainer col m12 l12"> -->
+				<section class="col s12 m6 l6 xl6 column1" id="page2">
+
+				</section>
+				<section class="col s12 m6 l6 xl6 column2">
+					<div class="valign-wrapper">
+						<img src="img/logo.png" class="logo valign">
+					</div>
+					<!-- FORM -->
+					<div class="thankyou">
+						<h1 class="title center-align">Thank You!</h1>
+						<p>You've taken the first steptowards harnessing the value
+						and power of your most influential customers. Please check
+						your e-mail, you should receive your ROI report shortly
+					</p>
+					<p>
+						Not seeing it? Please reach out to us at: sales@mavrck.co.
+					</p>
+				</div>
+					<!-- FORM -->
+				</section>
+			</div>
+
+		<!-- </div> -->
+	<!-- </div> -->
+<script   src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/underscore.min.js"></script>
+<script src="app.js"></script>
+<script>
+	var qs = (function(a) {
+	    if (a == "") return {};
+	    var b = {};
+	    for (var i = 0; i < a.length; ++i)
+	    {
+	        var p=a[i].split('=', 2);
+	        if (p.length == 1)
+	            b[p[0]] = "";
+	        else
+	            b[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
+	    }
+	    return b;
+	})(window.location.search.substr(1).split('&'));
+
+	qs["clickThroughRate"];
+	console.log(qs);
+	$("#click_through").val(qs["clickThroughRate"]);
+</script>
+</body>
+</html>
