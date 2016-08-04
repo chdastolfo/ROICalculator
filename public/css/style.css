@@ -9,7 +9,7 @@
   	==================== */
 body {
 	height: 100% !important;
-	background-image: url(../img/img3.jpeg);
+	background-image: url(../img/hero1.jpeg);
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -49,9 +49,14 @@ body {
 
  .column2 {
  	background-color: white;
- 	height: 100vh;
+ 	height: 100%;
 	max-height: 100%;
 	width: 50%;
+ }
+
+ section.column2 {
+	position: absolute !important;
+ 	right: 0 !important;
  }
 
  .col {
@@ -79,6 +84,9 @@ body {
 	margin-left: 40px;
 }
 
+.dropdown-button {
+	margin-top: 25px;
+}
 
 
  /*	====================
@@ -162,6 +170,12 @@ body {
 	color:  #1f1f1f;
 }
 
+.page-footer {
+	background-color: #ffb300 !important;
+	z-index: 10;
+	position: relative;
+}
+
 /* label focus color */
  .input-field input:focus + label {
    color: #ffb300 !important;
@@ -170,6 +184,18 @@ body {
  .row .input-field input:focus {
    border-bottom: 1px solid #ffb300 !important;
    box-shadow: 0 1px 0 0 #ffb300 !important
+ }
+
+ /* form index.page */
+ /* label focus color */
+ input[type=text]:focus{
+ border-bottom: 1px solid #ffb300 !important;
+ box-shadow: 0 1px 0 0 #ffb300 !important;
+ }
+
+ input[type=email]:focus{
+ border-bottom: 1px solid #ffb300 !important;
+ box-shadow: 0 1px 0 0 #ffb300 !important;
  }
 
 /*	====================
@@ -189,6 +215,25 @@ body {
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
 /* Styles */
 	section.column2 {
-		margin-top: -500px;	
+		margin-top: -500px;
+		positon: absolute;
+	}
+
+	#page2 {
+		display: none;
+		z-index: 10;
+	}
+}
+
+@media only screen and (min-width: 0){
+	.column2 {
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+
+	#page2 {
+		display: none;
+		z-index: 10;
 	}
 }
