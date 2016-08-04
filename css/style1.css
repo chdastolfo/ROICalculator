@@ -31,12 +31,37 @@ body {
 }
 
 
-
 .column1, .column2 {
 	padding: 1em;
 	height: 100vh;
 	min-height: 100%;
 	float: left;
+}
+
+
+.column1 {
+	flex: 1;
+	width: 50%;
+	background-image: url(../img/hero1.jpeg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+.column2 {
+	flex: 1;
+	width: 50%;
+	background-color: white;
+}
+
+.center-btn {
+	margin-top: 40px;
+	text-align: center;
+}
+
+.submit {
+	margin-top: 50px;
 }
 
 .column1 {
@@ -62,6 +87,23 @@ body {
 
 .submit {
 	margin-top: 50px;
+}
+
+.margin-fix {
+	margin-top: -5px;;
+}
+
+form {
+	margin-top: 100px;
+}
+
+#form1 {
+	margin: 0 20px;
+	margin-top: 100px;
+}
+
+select .input-field {
+	margin-top: 20px;
 }
 
  /*	====================
