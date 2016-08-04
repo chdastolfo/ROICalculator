@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Page Test1</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet"  href="css/style.css">
+</head>
+<body>
+	<!-- <div class="container"> -->
+		<div class="row">
+			<div class="innerContainer col m12 l12">
+				<section class="col s12 m6 l6 xl6 column1">
+
+				</section>
+				<section class="col s12 m6 l6 xl6 column2">
+					<div class="valign-wrapper">
+						<img src="img/logo.png" class="logo valign">
+					</div>
+					<h1 class="title center-align">ROI CALCULATOR</h1>
+					<!-- FORM -->
+					<form class="col s12" method="POST">
+				      	<div class="row">
+				        	<div class="input-field col s12">
+					          	<input id="audience_size" type="text" class="validate">
+					          	<label for="audience_size">Audience Size (Email):</label>
+				        	</div>
+				      	</div>
+				      	<div class="row">
+				        	<div class="input-field col s12">
+					          	<input id="click_through" type="text" class="validate" name="click_through">
+					          	<label for="click_through" name="click_through">Click Through Rate on Audience (Percentage)</label>
+				        	</div>
+				      	</div>
+				    	<div class="row">
+				        	<div class="input-field col s12">
+					          	<input id="conversion_rate" type="text" class="validate" value ="">
+					          	<label for="conversion_rate">Conversion Rate on Landing Page</label>
+				        	</div>
+				      	</div>
+				      	<div class="row">
+				        	<div class="input-field col s12">
+					          	<input id="average_price" type="text" class="validate">
+					          	<label for="average_price">Average Purchase Price</label>
+				        	</div>
+				      	</div>
+				      	<div class="row">
+				        	<div class="input-field col s12 input-field browser-default">
+					          	<input id="marketingObjective" type="text" class="validate">
+					          	<label for="marketingObjective">Marketing Objective</label>
+				        	</div>
+				      	</div>				      	
+					    <div class="row">
+					    	<div class="center-align">
+						    	<div class="">
+						          <!-- Dropdown Trigger -->
+								  <a class='dropdown-button btn submit' href='#'>Calculate ROI</a>
+
+								  <!-- Dropdown Structure -->
+								  <ul id='dropdown1' class='dropdown-content'>
+								    <li><a href="#!">Customer Acquisition</a></li>
+								    <li><a href="#!">eCommerce Purchases</a></li>
+								    <li class="divider"></li>
+								    <li><a href="#!">Mobile App Installs</a></li>
+								  </ul>				    		
+						    	</div>
+							</div>
+					    </div>
+			    	</form>
+					<!-- FORM -->
+				</section>
+			</div>
+		</div>
+	<!-- </div> -->
+<script   src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/underscore.min.js"></script>
+<script src="app.js"></script>
+<script>
+	//Query string to pass result of industry from lead gen page
+	var qs = (function(a) {
+	    if (a == "") return {};
+	    var b = {};
+	    for (var i = 0; i < a.length; ++i)
+	    {
+	        var p=a[i].split('=', 2);
+	        if (p.length == 1)
+	            b[p[0]] = "";
+	        else
+	            b[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
+	    }
+	    return b;
+	})(window.location.search.substr(1).split('&'));
+
+	qs["clickThroughRate"];
+	console.log(qs);
+	$("#click_through").val(qs["clickThroughRate"]);
+</script>
+</body>
+</html>
