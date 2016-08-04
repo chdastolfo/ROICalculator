@@ -1,0 +1,28 @@
+{
+  "name": "roicalculator",
+  "version": "1.0.0",
+  "description": "MAVRCK's ROI Calculator",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "mailer": "^0.6.7",
+    "mailgun-js": "^0.7.11",
+    "requirejs": "^2.2.0",
+    "sendgrid": "^4.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucky500/ROICalculator.git"
+  },
+  "author": "Christina D'Astolfo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lucky500/ROICalculator/issues"
+  },
+  "homepage": "https://github.com/lucky500/ROICalculator#readme"
+}
